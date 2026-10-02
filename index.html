@@ -69,8 +69,7 @@ ul{list-style:none}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .sec{padding:clamp(72px,10vw,120px) 0}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pink)}
-.eyebrow::before{content:"";width:18px;height:2px;border-radius:2px;background:var(--grad)}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pink)}
 .h2{font-size:clamp(32px,4.6vw,54px);line-height:1.04;letter-spacing:-.035em;font-weight:900;margin-top:14px}
 .lead{font-size:clamp(16px,1.6vw,18.5px);color:var(--ink-55);line-height:1.65;max-width:600px;margin-top:18px}
 .sec-head{max-width:760px}
@@ -376,7 +375,6 @@ body.menu-open .nav{background:var(--paper)}
 
 .hero .grad,.system .grad,.results .grad,.contact .grad,.pk.hot .pk-flag{background:none;-webkit-text-fill-color:var(--brand-orange);color:var(--brand-orange)}
 .pk.hot .pk-flag{background:var(--brand-orange);-webkit-text-fill-color:#fff;color:#fff}
-.eyebrow::before{background:var(--brand-orange)}
 .stars{color:var(--brand-orange)}
 .mbar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 -1px 0 var(--line),0 -10px 30px rgba(20,26,38,.08);transform:translateY(110%);transition:transform .35s var(--ease)}
 .mbar.show{transform:none}
