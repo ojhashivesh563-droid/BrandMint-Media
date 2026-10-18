@@ -231,8 +231,11 @@ textarea.input{min-height:96px;resize:vertical}
 .system .lead{color:var(--on-dark-60)}
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:60px;position:relative}
 .flow-step{position:relative;padding:26px 22px;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid var(--dark-line)}
-.flow-step .n{font-size:12px;font-weight:700;color:var(--on-dark-40);letter-spacing:.08em}
-.flow-step .fi{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--grad);color:#fff;margin:18px 0}
+.flow-step .n{font-size:12px;font-weight:700;color:var(--brand-orange);letter-spacing:.08em}
+.flow-img{margin:-26px -22px 20px;aspect-ratio:3/2;overflow:hidden;border-radius:var(--r) var(--r) 0 0;background:var(--ink2)}
+.flow-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.flow-step:hover .flow-img img{transform:scale(1.05)}
+.flow-step h3{margin-top:10px}
 .flow-step h3{font-size:18px;font-weight:700;letter-spacing:-.02em}
 .flow-step p{font-size:14px;color:var(--on-dark-60);margin-top:8px}
 .flow-step:not(:last-child)::after{content:"";position:absolute;right:-12px;top:50%;width:10px;height:10px;border-top:2px solid rgba(255,255,255,.3);border-right:2px solid rgba(255,255,255,.3);transform:translateY(-50%) rotate(45deg);z-index:2}
@@ -712,10 +715,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="lead r" data-d="2">Most agencies only handle one piece. When the same team builds the ad, the page and the tracking, every step is designed to convert, and nothing leaks in between.</p>
     </div>
     <div class="flow">
-      <div class="flow-step r" data-d="1"><span class="n">STEP 01</span><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Targeted ads</h3><p>Meta &amp; Google campaigns aimed at people ready to buy, with creatives that stop the scroll.</p></div>
-      <div class="flow-step r" data-d="2"><span class="n">STEP 02</span><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Landing page that converts</h3><p>A focused page that matches the ad's promise and makes enquiring effortless.</p></div>
-      <div class="flow-step r" data-d="3"><span class="n">STEP 03</span><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg></div><h3>Tracked to the rupee</h3><p>GA4, GTM, Pixel and Conversions API, so you see exactly what each lead or sale costs.</p></div>
-      <div class="flow-step r" data-d="4"><span class="n">STEP 04</span><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Optimise &amp; scale</h3><p>We cut what doesn't work, double down on what does, and scale spend profitably.</p></div>
+      <div class="flow-step r" data-d="1"><div class="flow-img"><img src="/assets/steps/ads.webp" alt="Person scrolling a social media feed on a phone" loading="lazy" width="720" height="460"></div><span class="n">STEP 01</span><h3>Targeted ads</h3><p>Meta &amp; Google campaigns aimed at people ready to buy, with creatives that stop the scroll.</p></div>
+      <div class="flow-step r" data-d="2"><div class="flow-img"><img src="/assets/steps/page.webp" alt="Laptop showing a clean landing page form" loading="lazy" width="720" height="460"></div><span class="n">STEP 02</span><h3>Landing page that converts</h3><p>A focused page that matches the ad's promise and makes enquiring effortless.</p></div>
+      <div class="flow-step r" data-d="3"><div class="flow-img"><img src="/assets/steps/track.webp" alt="Laptop showing a live analytics dashboard" loading="lazy" width="720" height="460"></div><span class="n">STEP 03</span><h3>Tracked to the rupee</h3><p>GA4, GTM, Pixel and Conversions API, so you see exactly what each lead or sale costs.</p></div>
+      <div class="flow-step r" data-d="4"><div class="flow-img"><img src="/assets/steps/scale.webp" alt="Team reviewing a growth chart in a meeting" loading="lazy" width="720" height="460"></div><span class="n">STEP 04</span><h3>Optimise &amp; scale</h3><p>We cut what doesn't work, double down on what does, and scale spend profitably.</p></div>
     </div>
     <div class="system-cta r">
       <a class="btn btn-grad" href="#contact" data-service="Growth Combo (Website + Ads)" data-cta="system">Get in Touch <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
