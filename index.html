@@ -161,6 +161,7 @@ textarea.input{min-height:96px;resize:vertical}
 @keyframes sp{to{transform:rotate(360deg)}}
 .form.loading .spin{display:inline-block}.form.loading .arr{display:none}
 .micro{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12.5px;color:var(--ink-55);text-align:center}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .f-msg{display:none;font-size:13.5px;padding:11px 14px;border-radius:var(--r-sm);font-weight:500}
 .f-msg.err{display:block;background:#FEF2F2;color:#B91C1C}
 .f-msg.ok{display:block;background:#F0FDF4;color:#15803D}
@@ -509,9 +510,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <form class="form lead-form" data-location="hero" novalidate>
         <div class="field"><label for="h-name">Full name <i>*</i></label><input class="input" id="h-name" name="fullName" autocomplete="name" placeholder="Your name" required></div>
         <div class="row">
-          <div class="field"><label for="h-phone">WhatsApp / Phone <i>*</i></label><input class="input" id="h-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" required></div>
-          <div class="field"><label for="h-email">Email <i>*</i></label><input class="input" id="h-email" name="email" type="email" autocomplete="email" placeholder="you@brand.com" required></div>
+          <div class="field"><label for="h-phone">Mobile number <i>*</i></label><input class="input" id="h-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" required></div>
+          <div class="field"><label for="h-email">Company email <i>*</i></label><input class="input" id="h-email" name="email" type="email" autocomplete="email" placeholder="you@yourcompany.com" required></div>
         </div>
+        <div class="field"><label for="h-website">Company website <i>*</i></label><input class="input" id="h-website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="www.yourcompany.com" required></div>
+        <div class="row">
+          <div class="field"><label for="h-city">City <i>*</i></label><input class="input" id="h-city" name="city" list="in-cities" autocomplete="address-level2" placeholder="e.g. Surat" required></div>
+          <div class="field"><label for="h-state">State <i>*</i></label>
+            <select class="input" id="h-state" name="state" required><option value="">Select state</option><option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option><option>Chhattisgarh</option><option>Goa</option><option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jharkhand</option><option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option><option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option><option>West Bengal</option><option>Andaman and Nicobar Islands</option><option>Chandigarh</option><option>Dadra and Nagar Haveli and Daman and Diu</option><option>Delhi</option><option>Jammu and Kashmir</option><option>Ladakh</option><option>Lakshadweep</option><option>Puducherry</option></select>
+          </div>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input name="company_fax" tabindex="-1" autocomplete="off"></label></div>
+        <datalist id="in-cities"><option value="Mumbai"><option value="Delhi"><option value="Bengaluru"><option value="Hyderabad"><option value="Ahmedabad"><option value="Chennai"><option value="Kolkata"><option value="Surat"><option value="Pune"><option value="Jaipur"><option value="Lucknow"><option value="Kanpur"><option value="Nagpur"><option value="Indore"><option value="Thane"><option value="Bhopal"><option value="Visakhapatnam"><option value="Vadodara"><option value="Rajkot"><option value="Patna"><option value="Ludhiana"><option value="Agra"><option value="Nashik"><option value="Faridabad"><option value="Meerut"><option value="Varanasi"><option value="Srinagar"><option value="Amritsar"><option value="Navi Mumbai"><option value="Noida"><option value="Gurugram"><option value="Ghaziabad"><option value="Chandigarh"><option value="Coimbatore"><option value="Kochi"><option value="Thiruvananthapuram"><option value="Madurai"><option value="Mysuru"><option value="Mangaluru"><option value="Guwahati"><option value="Bhubaneswar"><option value="Raipur"><option value="Ranchi"><option value="Dehradun"><option value="Jodhpur"><option value="Udaipur"><option value="Goa"><option value="Vapi"><option value="Anand"><option value="Gandhinagar"><option value="Bhavnagar"><option value="Jamnagar"></datalist>
         <div class="field"><label for="h-service">What do you need?</label>
           <select class="input" id="h-service" name="service">
             <option value="">Select a service</option>
@@ -873,10 +883,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="field"><label for="f-businessName">Business name</label><input class="input" id="f-businessName" name="businessName" autocomplete="organization" placeholder="Your brand"></div>
         </div>
         <div class="row">
-          <div class="field"><label for="f-phone">WhatsApp / Phone <i>*</i></label><input class="input" id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" required></div>
-          <div class="field"><label for="f-email">Email <i>*</i></label><input class="input" id="f-email" name="email" type="email" autocomplete="email" placeholder="you@brand.com" required></div>
+          <div class="field"><label for="f-phone">Mobile number <i>*</i></label><input class="input" id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" required></div>
+          <div class="field"><label for="f-email">Company email <i>*</i></label><input class="input" id="f-email" name="email" type="email" autocomplete="email" placeholder="you@yourcompany.com" required></div>
         </div>
-        <div class="field"><label for="f-website">Website / Instagram</label><input class="input" id="f-website" name="website" placeholder="www.yourbrand.com or @handle"></div>
+        <div class="field"><label for="f-website">Company website <i>*</i></label><input class="input" id="f-website" name="website" type="url" inputmode="url" autocomplete="url" placeholder="www.yourcompany.com" required></div>
+        <div class="row">
+          <div class="field"><label for="f-city">City <i>*</i></label><input class="input" id="f-city" name="city" list="in-cities" autocomplete="address-level2" placeholder="e.g. Surat" required></div>
+          <div class="field"><label for="f-state">State <i>*</i></label>
+            <select class="input" id="f-state" name="state" required><option value="">Select state</option><option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option><option>Chhattisgarh</option><option>Goa</option><option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jharkhand</option><option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option><option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option><option>West Bengal</option><option>Andaman and Nicobar Islands</option><option>Chandigarh</option><option>Dadra and Nagar Haveli and Daman and Diu</option><option>Delhi</option><option>Jammu and Kashmir</option><option>Ladakh</option><option>Lakshadweep</option><option>Puducherry</option></select>
+          </div>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input name="company_fax" tabindex="-1" autocomplete="off"></label></div>
         <div class="row">
           <div class="field"><label for="f-service">Service</label>
             <select class="input" id="f-service" name="service">
@@ -1113,8 +1130,27 @@ var SITE = {
   try { sessionStorage.setItem('bm_attr', JSON.stringify(attr)); } catch(e){}
 
   /* ── Lead form submission (posts to Google Apps Script → Sheet) ── */
-  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  function phoneOk(v){ var d = v.replace(/\D/g,''); return d.length >= 10 && d.length <= 13; }
+  var EMAIL_RE = /^[^\s@]+@([a-z0-9-]+\.)+[a-z]{2,}$/i;
+  var FREE_MAIL = ['gmail.com','googlemail.com','yahoo.com','yahoo.in','yahoo.co.in','ymail.com','rocketmail.com','hotmail.com','hotmail.co.in','outlook.com','outlook.in','live.com','live.in','msn.com','rediffmail.com','rediff.com','icloud.com','me.com','mac.com','aol.com','protonmail.com','proton.me','pm.me','zoho.com','zohomail.in','yandex.com','yandex.ru','mail.com','gmx.com','gmx.net','tutanota.com','hey.com','inbox.com','fastmail.com'];
+  var SOCIAL = /(^|\.)(instagram|facebook|fb|linkedin|twitter|x|youtube|wa|whatsapp|linktr|t)\.(com|me|ee|co)$/i;
+  /* Indian mobile: 10 digits starting 6-9, optional +91 / 91 / 0 prefix. Returns '+91 98765 43210' or '' */
+  function normPhone(v){
+    var d = v.replace(/\D/g,'');
+    if(d.length === 12 && d.indexOf('91') === 0) d = d.slice(2);
+    else if(d.length === 11 && d[0] === '0') d = d.slice(1);
+    if(!/^[6-9]\d{9}$/.test(d) || /^(\d)\1{9}$/.test(d) || /0123456789|1234567890|9876543210/.test(d)) return '';
+    return '+91 ' + d.slice(0,5) + ' ' + d.slice(5);
+  }
+  function hostOf(v){ return v.trim().replace(/^https?:\/\//i,'').split(/[\/?#]/)[0].replace(/^www\./i,'').toLowerCase(); }
+  /* Company website: returns 'https://host/path' or '' */
+  function normSite(v){
+    var u = v.trim().replace(/\s+/g,''); if(!u) return '';
+    if(!/^https?:\/\//i.test(u)) u = 'https://' + u;
+    var url; try { url = new URL(u); } catch(e){ return ''; }
+    var h = url.hostname.replace(/^www\./i,'');
+    if(!/^([a-z0-9-]+\.)+[a-z]{2,}$/i.test(h) || SOCIAL.test(h)) return '';
+    return 'https://' + url.hostname + (url.pathname === '/' ? '' : url.pathname);
+  }
 
   document.querySelectorAll('.lead-form').forEach(function(form){
     var msg = form.querySelector('.f-msg'), btn = form.querySelector('button[type=submit]');
@@ -1129,14 +1165,22 @@ var SITE = {
     form.addEventListener('submit', function(e){
       e.preventDefault();
       msg.className = 'f-msg';
-      var n = form.elements.fullName, p = form.elements.phone, m = form.elements.email;
-      if(!n.value.trim()) return fail('Please enter your name.', n);
-      if(!phoneOk(p.value)) return fail('Please enter a valid phone / WhatsApp number.', p);
-      if(!EMAIL_RE.test(m.value.trim())) return fail('Please enter a valid email address.', m);
+      var el = form.elements;
+      if(el.company_fax && el.company_fax.value){ msg.className = 'f-msg ok'; msg.textContent = 'Thanks! We will be in touch.'; form.reset(); return; }
+      if(!el.fullName.value.trim()) return fail('Please enter your name.', el.fullName);
+      var phone = normPhone(el.phone.value);
+      if(!phone) return fail('Please enter a valid 10-digit Indian mobile number.', el.phone);
+      var email = el.email.value.trim().toLowerCase(), dom = email.split('@')[1] || '';
+      if(!EMAIL_RE.test(email)) return fail('Please enter a valid email address.', el.email);
+      if(FREE_MAIL.indexOf(dom) > -1) return fail('Please use your company email, not a personal ' + dom + ' address.', el.email);
+      var site = normSite(el.website.value);
+      if(!site) return fail(SOCIAL.test(hostOf(el.website.value)) ? 'Please enter your company website, not a social media link.' : 'Please enter a valid company website, e.g. www.yourcompany.com', el.website);
+      if(!el.city.value.trim()) return fail('Please enter your city.', el.city);
+      if(!el.state.value) return fail('Please select your state.', el.state);
 
       var payload = {
-        fullName: field('fullName'), businessName: field('businessName'), email: field('email'), phone: field('phone'),
-        website: field('website'), service: field('service'), budget: field('budget'), projectDetails: field('projectDetails'),
+        fullName: field('fullName'), businessName: field('businessName'), email: email, phone: phone,
+        website: site, city: field('city'), state: field('state'), service: field('service'), budget: field('budget'), projectDetails: field('projectDetails'),
         formLocation: form.getAttribute('data-location'), submittedAt: new Date().toISOString()
       };
       KEYS.concat(['landing_page','referrer']).forEach(function(k){ payload[k] = attr[k] || ''; });
@@ -1147,9 +1191,9 @@ var SITE = {
       .then(function(){
         var done = false;
         function go(){ if(done) return; done = true; location.href = SITE.THANK_YOU + '?s=' + encodeURIComponent(payload.service || 'general'); }
-        var digits = payload.phone.replace(/\D/g,''); if(digits.length === 10) digits = '91' + digits;
         dataLayer.push({ event:'generate_lead', form_location:payload.formLocation, lead_service:payload.service, lead_budget:payload.budget,
-          user_data:{ email:payload.email.toLowerCase(), phone_number:'+' + digits }, eventCallback:go, eventTimeout:1200 });
+          lead_city:payload.city, lead_state:payload.state,
+          user_data:{ email:payload.email, phone_number:payload.phone.replace(/\s/g,''), address:{ city:payload.city, region:payload.state, country:'IN' } }, eventCallback:go, eventTimeout:1200 });
         setTimeout(go, 1500);
       })
       .catch(function(){
