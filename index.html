@@ -339,6 +339,39 @@ textarea.input{min-height:96px;resize:vertical}
 @media (max-width:900px){.res-grid{grid-template-columns:1fr 1fr}.res:nth-child(2){border-right:0}.res:nth-child(-n+2){border-bottom:1px solid var(--dark-line);padding-bottom:32px}}
 @media (max-width:480px){.res{padding:28px 16px 8px}.res:nth-child(-n+2){padding-bottom:24px}}
 
+/* ── OUR WORK ── */
+.work{background:var(--mist)}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:56px}
+.proj{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.proj:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
+.proj-shot{padding:22px 22px 0;background:var(--tint)}
+.proj:nth-child(3n+2) .proj-shot{background:#E8EEF9}
+.proj:nth-child(3n+3) .proj-shot{background:#FFF1DE}
+.frame{border-radius:12px 12px 0 0;overflow:hidden;background:#fff;box-shadow:0 18px 40px -18px rgba(20,26,38,.35)}
+.frame-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#fff;border-bottom:1px solid var(--line)}
+.frame-bar i{width:8px;height:8px;border-radius:50%;background:#E3E5EA}
+.frame-bar span{flex:1;margin-left:8px;font-size:11px;font-weight:500;color:var(--ink-55);background:var(--mist);border-radius:6px;padding:3px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frame-img{aspect-ratio:16/10;overflow:hidden}
+.frame-img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s var(--ease)}
+.proj:hover .frame-img img{transform:scale(1.03)}
+.proj-body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
+.proj-tags{display:flex;flex-wrap:wrap;gap:8px}
+.proj-tags span{font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px;background:var(--mist);color:var(--ink-70)}
+.proj h3{font-size:24px;font-weight:900;letter-spacing:-.03em;margin-top:14px}
+.proj p{font-size:15px;color:var(--ink-55);margin-top:8px}
+.proj-link{display:inline-flex;align-items:center;gap:8px;margin-top:auto;padding-top:18px;font-weight:700;font-size:15px;color:var(--orange)}
+.proj-link svg{transition:transform .2s var(--ease)}
+.proj-link:hover svg{transform:translate(2px,-2px)}
+.proj.feature{grid-column:1/-1;flex-direction:row}
+.proj.feature .proj-shot{flex:1.35;padding:28px 0 0 28px}
+.proj.feature .frame{border-radius:12px 0 0 0}
+.proj.feature .proj-body{flex:1;justify-content:center;padding:36px}
+.proj.feature h3{font-size:clamp(26px,3vw,34px)}
+.work-cta{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:22px;padding:26px 30px;border-radius:var(--r);background:var(--ink);color:var(--on-dark)}
+.work-cta p{font-size:clamp(17px,1.9vw,21px);font-weight:700;letter-spacing:-.02em}
+.work-cta p span{color:var(--on-dark-60);font-weight:500}
+@media (max-width:900px){.work-grid{grid-template-columns:1fr}.proj.feature{flex-direction:column}.proj.feature .proj-shot{padding:22px 22px 0}.proj.feature .frame{border-radius:12px 12px 0 0}.proj.feature .proj-body{padding:24px 26px 26px}}
+
 /* ── TESTIMONIALS ── */
 .tst{background:var(--mist)}
 .tst-grid{columns:3 320px;column-gap:18px;margin-top:56px}
@@ -420,6 +453,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
       <a href="#results">Results</a>
       <a href="#system">How it works</a>
       <a href="#packages">Packages</a>
@@ -431,6 +465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 <div class="drawer" id="drawer">
   <a href="#services">Services</a>
+  <a href="#work">Our Work</a>
   <a href="#results">Results</a>
   <a href="#system">How it works</a>
   <a href="#packages">Packages</a>
@@ -593,6 +628,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a class="btn btn-grad" href="#contact" data-service="Paid Media (Meta + Google Ads)" data-cta="svc_ads">Get in Touch <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section class="sec work" id="work">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow r">Our work</span>
+      <h2 class="h2 r" data-d="1">Websites we've <span class="grad">designed and built.</span></h2>
+      <p class="lead r" data-d="2">A few live sites from our team, built for manufacturers, consultancies and service brands. Click through and see them in action.</p>
+    </div>
+    <div class="work-grid">
+      <article class="proj feature r">
+        <div class="proj-shot"><div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span>adityaflexipack.com</span></div>
+          <div class="frame-img"><img src="/assets/work/aditya.webp" alt="Aditya Flexipack website homepage" loading="lazy" width="1200" height="750"></div>
+        </div></div>
+        <div class="proj-body">
+          <div class="proj-tags"><span>Manufacturing</span><span>B2B</span><span>Corporate website</span></div>
+          <h3>Aditya Flexipack</h3>
+          <p>A corporate website for a flexible packaging manufacturer serving India's leading FMCG brands. Built to showcase their product range and certifications, and to turn visitors into partnership enquiries.</p>
+          <a class="proj-link" href="https://www.adityaflexipack.com/" target="_blank" rel="noopener" data-work="aditya">View live site <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
+      <article class="proj r">
+        <div class="proj-shot"><div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span>spearhead.so</span></div>
+          <div class="frame-img"><img src="/assets/work/spearhead.webp" alt="Spearhead website homepage" loading="lazy" width="1200" height="750"></div>
+        </div></div>
+        <div class="proj-body">
+          <div class="proj-tags"><span>AI consulting</span><span>B2B</span></div>
+          <h3>Spearhead</h3>
+          <p>A sharp, minimal site for an enterprise AI consultancy, with clear positioning and lead capture built into the page.</p>
+          <a class="proj-link" href="https://www.spearhead.so/" target="_blank" rel="noopener" data-work="spearhead">View live site <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
+      <article class="proj r">
+        <div class="proj-shot"><div class="frame">
+          <div class="frame-bar"><i></i><i></i><i></i><span>talentelement.com</span></div>
+          <div class="frame-img"><img src="/assets/work/talent.webp" alt="Talent Element website homepage" loading="lazy" width="1200" height="750"></div>
+        </div></div>
+        <div class="proj-body">
+          <div class="proj-tags"><span>Leadership training</span><span>Services</span></div>
+          <h3>Talent Element</h3>
+          <p>A website for a leadership development firm, presenting coaching programmes and driving consultation bookings.</p>
+          <a class="proj-link" href="https://www.talentelement.com/" target="_blank" rel="noopener" data-work="talent">View live site <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11 11 5M6 5h5v5"/></svg></a>
+        </div>
+      </article>
+      <!-- Ideas Matter Most (ideasmattermost.com): add back once its hidden spam links are cleaned up -->
+    </div>
+    <div class="work-cta r">
+      <p>Want a website like these? <span>Let's build one that brings you leads and sales.</span></p>
+      <a class="btn btn-grad" href="#contact" data-service="Website Development" data-cta="work">Get in Touch <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
@@ -997,6 +1086,9 @@ var SITE = {
   /* CTA buttons pre-select the service in the contact form */
   document.querySelectorAll('[data-service]').forEach(function(a){
     a.addEventListener('click', function(){ var s = document.getElementById('f-service'); if(s) s.value = a.getAttribute('data-service'); });
+  });
+  document.querySelectorAll('[data-work]').forEach(function(a){
+    a.addEventListener('click', function(){ dataLayer.push({event:'portfolio_click', project:a.getAttribute('data-work')}); });
   });
   document.querySelectorAll('[data-cta]').forEach(function(a){
     a.addEventListener('click', function(){ dataLayer.push({event:'cta_click', cta_location:a.getAttribute('data-cta')}); });
